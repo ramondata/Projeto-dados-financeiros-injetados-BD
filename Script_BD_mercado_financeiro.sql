@@ -59,6 +59,8 @@ create table fato_market
  delete from dimensao_market
  where ativo = 'BAC'
  
+ savepoint D
+ 
  /* View criada para check dos ativos inseridos na tabela FATO  do banco de dados */
  create view ativo_check as
  select distinct 
@@ -66,6 +68,8 @@ create table fato_market
  from fato_market f
  inner join dimensao_market d
  on f.ativo = d.ativo
+ 
+ savepoint E
  
   /* Verificação de criação das tabelas */
  select * from fato_market
