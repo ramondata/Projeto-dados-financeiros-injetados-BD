@@ -67,6 +67,13 @@ create table fato_market
  inner join dimensao_market d
  on f.ativo = d.ativo
  
+  /* Verificação de criação das tabelas */
+ select * from fato_market
+ 
+ select * from dimensao_market
+ 
+ select * from ativo_check
+ 
  /* Confirmação e encerramento da transaction com as tabelas criadas e testadas*/
  commit
  
